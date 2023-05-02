@@ -35,7 +35,17 @@ body{
     width:300px;
 }
 
+.site a:link{
+    color: rgb(255, 185, 40);
+}
 
+.site a:visited{
+    color: rgb(220, 140, 40);
+}
+
+.site a:hover{
+    color: rgb(220, 96, 30);
+}
 
 .writeup {
     display: flex;
