@@ -1,6 +1,7 @@
 .project-list{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
@@ -19,13 +20,15 @@
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     
 }
 
 
 .project img{
     max-width: 30%;
-    width: auto;
+    max-height: 100%;
     height: auto;
+    width: fit-content;
     padding-right:10px;
 }
