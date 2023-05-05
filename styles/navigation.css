@@ -12,6 +12,10 @@
     justify-content:space-between;
 }
 
+.navbar .navlist .icon{
+    display: none;
+}
+
 .left-section{
     display: flex;
     align-content: center;
@@ -91,15 +95,3 @@ a.name {
     background-color: black;
 }
 
-@media screen and (max-width:450px){
-    .navlist a{
-        font-size: .75rem;
-        min-width: 40;
-    }
-
-    a.name {
-        font-size: 1rem;
-        font-weight: 600;
-        width: 100px;
-    }
-}
