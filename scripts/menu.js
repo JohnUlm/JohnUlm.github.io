@@ -1,8 +1,8 @@
 function DropDownFunc() {
     var x = document.getElementById("nav");
-    if (x.className === "navlist") {
+    if (x.className === "navbar") {
         x.className += " dropdown";
     } else {
-        x.className = "navlist";
+        x.className = "navbar";
     }
 }

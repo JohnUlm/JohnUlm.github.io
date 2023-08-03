@@ -1,49 +1,51 @@
-.navbar{
-    background-color: rgb(35,35,35);
+.navbar {
+    background-color: rgb(35, 35, 35);
 
-    display:flex;
+    display: flex;
     flex-direction: row;
-    align-items:flex-end;
-    
-    width:100%;
+    align-items: flex-end;
+
+    width: 100%;
     min-height: 60px;
-    margin:0;
-    padding: 0px 0px;;
-    justify-content:space-between;
+    margin: 0;
+    padding: 0px 0px;
+    ;
+    justify-content: space-between;
 }
 
-.navbar .navlist .icon{
-    display: none;
-}
-
-.left-section{
+.left-section {
     display: flex;
     align-content: center;
     align-items: center;
-    flex-shrink: 0;
-    height:48px;
+    height: 48px;
     padding-left: 10px;
+    padding-right: 10px;
+}
+
+.left-section .icon {
+    display: none;
 }
 
 a.name {
     text-decoration-line: none;
     text-align: center;
     font-size: 1.5rem;
-    color:white;
+    color: white;
     font-weight: 700;
     width: 150px;
-    
+
 
     transition: all .25s;
-    
+
 }
-.name:hover{
+
+.name:hover {
     text-decoration-line: underline;
 }
 
 .navlist {
     display: flex;
-    vertical-align: stretch;
+
     align-content: bottom;
     align-items: flex-end;
 
@@ -54,35 +56,35 @@ a.name {
 
     display: flex;
     flex-direction: row;
-    margin:0;
-    padding:0;
-    
+    margin: 0;
+    padding: 0;
+
 }
 
 
-.navlist a{
+.navlist a {
     display: flex;
-    
+
     text-align: center;
     align-items: center;
     justify-content: center;
-    height:48px;
-    
+    height: 48px;
+
 
     color: white;
-    font-size:1rem;
+    font-size: 1rem;
     text-decoration-line: none;
     transition: all .25s;
-    
-    flex:1;
-    order:1;
+
+    flex: 1;
+    order: 1;
 
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     border-bottom: 0px;
 }
 
-.navbar .active{
+.navbar .active {
     background-color: rgb(70, 70, 70);
     order: 1;
     text-decoration: underline;
@@ -91,50 +93,87 @@ a.name {
 
 
 
-.navlist a:hover:not(.active){
+.navlist a:hover:not(.active) {
     background-color: black;
 }
 
 /* Phone/Tablet-Specific Menu */
 @media only screen and (max-width: 768px) {
 
-    .navbar .navlist{
-        width:90px;
-    }
-
     /* Only show selected until menu shown */
     .navlist a:not(.name) {
         display: none;
     }
 
-    /* Menu Icon */
-    .navbar .navlist .icon {
-        display:block;
+    .navbar {
+        display: block;
+        min-height: 48px;
+    }
 
-        width:90px;
+    /* Menu Icon */
+    .left-section .icon {
+        display: flex;
+
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+
+
+        color: white;
+        font-size: 1rem;
+        text-decoration-line: none;
+        transition: all .25s;
+
+        flex: 1;
+        order: 1;
+
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom: 0px;
+        min-width: 90px;
+        width: 100%;
     }
 
     /* Hover Menu Icon */
-    .navlist a.icon:hover {
-        background-color:black;
+    .left-section a.icon:hover {
+        background-color: black;
     }
 
     /* Open Menu */
-    .navlist.dropdown {position: relative;}
+    .navbar.dropdown {
+        display: block;
+    }
+
+    .navbar.dropdown .left-section a.icon {
+        background-color: white;
+    }
+
+    navbar.dropdown {
+        position: relative;
+    }
+
+    .navbar.dropdown .navlist {
+        gap: 3px;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 100%;
+
+    }
 
     /* Open Menu Icon */
-    .navlist.dropdown a.icon {
-        position: absolute;
-        right: 5%;
-        top: 0;
-    }
 
     /* Open Menu Links */
-    .navlist.dropdown a {
-        
+    .navbar.dropdown .navlist a {
+        text-align: center;
         float: none;
-        display: block;
+        display: flex;
         text-align: left;
+        padding: 10px;
+        background-color: rgb(35, 35, 35);
     }
+    
+    .navbar.dropdown .navlist a:hover{background-color: black;}
 
 }
